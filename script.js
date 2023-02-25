@@ -1,13 +1,12 @@
+
+  /*Creating variables, which are equal to html elements */
 var skip = document.getElementById('skip');
 var score = document.getElementById('score');
 var totalScore = document.getElementById('totalScore');
-var countdown = document.getElementById('countdown');
 var count = 0;
 var scoreCount = 0;
-
-var duration = 0;
-
 var qaSets = document.querySelectorAll('.qa_set');
+//                                                       //
 
 qaSets.forEach(function(qaSet) {
   var qaAnsRow = qaSet.querySelectorAll('.qa_ans_row input');
