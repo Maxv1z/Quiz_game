@@ -3,6 +3,7 @@
 var skip = document.getElementById('skip');
 var score = document.getElementById('score');
 var totalScore = document.getElementById('totalScore');
+var header = document.getElementById('qa_header');
 var count = 0;
 var scoreCount = 0;
 var qaSets = document.querySelectorAll('.qa_set');
@@ -14,6 +15,10 @@ qaSets.forEach(function(qaSet) { // going through all sets with Q and A
   
   qaAnsRow.forEach(function(qaAnsRowSingle) { // Going via particular block of Q and A
     qaAnsRowSingle.addEventListener('click', function(){
+      setTimeout(function(){
+        step();
+      }, 500)
+      
       if (!selectedAnswers) {
         selectedAnswers = this;
         
@@ -35,7 +40,19 @@ qaSets.forEach(function(qaSet) { // going through all sets with Q and A
             qaAnsRowSingle.disabled = true;
           }
         });
+
+        
       }
     });
   });
 });
+
+function step() {
+  count += 1;
+  for(let i = 0; i < qaSets.length; i++){
+    qaSets[i].className = "qa_set"
+  }
+  qaSets[count].className = "qa_set active";
+}
+
+
