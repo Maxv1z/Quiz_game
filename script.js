@@ -3,6 +3,7 @@
 var skip = document.getElementById('skip');
 var score = document.getElementById('score');
 var totalScore = document.getElementById('totalScore');
+var header = document.getElementById('qa_header');
 var count = 0;
 var scoreCount = 0;
 var qaSets = document.querySelectorAll('.qa_set');
@@ -39,6 +40,8 @@ qaSets.forEach(function(qaSet) { // going through all sets with Q and A
             qaAnsRowSingle.disabled = true;
           }
         });
+
+        
       }
     });
   });
@@ -51,3 +54,5 @@ function step() {
   }
   qaSets[count].className = "qa_set active";
 }
+
+
