@@ -9,6 +9,11 @@ body {
     justify-content: space-around;
     min-height: 100vh;
 }
+
+#photo {
+    max-width: 100%;    
+}
+
 .qa_set {
     display: none;
 }
@@ -32,7 +37,7 @@ body {
     background-color: rgba(0, 0, 0, 0.742);
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 15px 20px;
     margin: -20px -20px 0;
     border-radius: 15px 15px 0 0;
@@ -82,7 +87,7 @@ body {
     justify-content: center;
     vertical-align: middle;
     margin: -20px;
-    margin-top: 30px;
+    margin-top: 0px;
     border-radius: 7px 7px 15px 15px;
     font-size: 15px;
 }
