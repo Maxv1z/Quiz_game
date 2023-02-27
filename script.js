@@ -46,8 +46,8 @@ qaSets.forEach(function(qaSet) { // going through all sets with Q and A
 
 function step() {
   count += 1;
-  for(let i = 0; i < qaSets.clientHeight; i++){
-    qaSets[i].setAttribute("display","block");
+  for(let i = 0; i < qaSets.length; i++){
+    qaSets[i].className = "qa_set"
   }
-  qaSets[count].setAttribute("display", "none");
+  qaSets[count].className = "qa_set active";
 }

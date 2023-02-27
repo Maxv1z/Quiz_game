@@ -9,6 +9,13 @@ body {
     justify-content: space-around;
     min-height: 100vh;
 }
+.qa_set {
+    display: none;
+}
+
+.qa_set.active{
+    display: block;
+}
 
 .qa_box{
     width: 500px;
