@@ -14,6 +14,10 @@ qaSets.forEach(function(qaSet) { // going through all sets with Q and A
   
   qaAnsRow.forEach(function(qaAnsRowSingle) { // Going via particular block of Q and A
     qaAnsRowSingle.addEventListener('click', function(){
+      setTimeout(function(){
+        step();
+      }, 500)
+      
       if (!selectedAnswers) {
         selectedAnswers = this;
         
@@ -39,3 +43,11 @@ qaSets.forEach(function(qaSet) { // going through all sets with Q and A
     });
   });
 });
+
+function step() {
+  count += 1;
+  for(let i = 0; i < qaSets.clientHeight; i++){
+    qaSets[i].setAttribute("display","block");
+  }
+  qaSets[count].setAttribute("display", "none");
+}
